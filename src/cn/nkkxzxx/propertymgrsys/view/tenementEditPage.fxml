@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="539.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.nkkxzxx.propertymgrsys.controller.TenementEditPageController">
+    <children>
+        <ListView fx:id="roomsListView" layoutX="30.0" layoutY="93.0" onMouseClicked="#selectRooms" prefHeight="324.0" prefWidth="173.0" stylesheets="@styles.css" />
+        <TextField fx:id="serText" layoutX="30.0" layoutY="425.0" prefHeight="31.0" prefWidth="94.0" promptText="房间号" stylesheets="@styles.css">
+            <font>
+                <Font name="Noto Sans CJK JP" size="14.0" />
+            </font>
+        </TextField>
+        <Button fx:id="searchBtn" layoutX="137.0" layoutY="425.0" mnemonicParsing="false" onAction="#searchRooms" prefHeight="31.0" prefWidth="66.0" stylesheets="@styles.css" text="搜索">
+            <font>
+                <Font name="Noto Sans CJK JP" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="displayAllRoomsBtn" layoutX="30.0" layoutY="469.0" mnemonicParsing="false" onAction="#displayAllRooms" prefHeight="24.0" prefWidth="173.0" stylesheets="@styles.css" text="显示所有房间">
+            <font>
+                <Font name="Noto Sans CJK JP" size="14.0" />
+            </font>
+        </Button>
+        <Label layoutX="30.0" layoutY="30.0" text="住户编辑">
+            <font>
+                <Font name="Noto Sans CJK JP" size="30.0" />
+            </font>
+        </Label>
+        <TextField fx:id="teNameText" layoutX="411.0" layoutY="270.0" prefHeight="24.0" prefWidth="126.0" stylesheets="@styles.css" />
+        <TextField fx:id="tePhoneText" layoutX="412.0" layoutY="335.0" prefHeight="24.0" prefWidth="126.0" stylesheets="@styles.css" />
+        <Button fx:id="updateBtn" layoutX="412.0" layoutY="386.0" mnemonicParsing="false" onAction="#updateTenement" prefHeight="31.0" prefWidth="126.0" stylesheets="@styles.css" text="提交">
+            <font>
+                <Font name="Noto Sans CJK JP" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="clearTextBtn" layoutX="412.0" layoutY="469.0" mnemonicParsing="false" onAction="#clearTextFields" prefHeight="31.0" prefWidth="126.0" stylesheets="@styles.css" text="清除输入框">
+            <font>
+                <Font name="Noto Sans CJK JP" size="14.0" />
+            </font>
+        </Button>
+        <TableView fx:id="infoTable" layoutX="343.0" layoutY="126.0" prefHeight="57.0" prefWidth="265.0" stylesheets="@styles.css">
+            <columns>
+                <TableColumn fx:id="floorColumn" editable="false" prefWidth="75.0" sortable="false" text="房间编号">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="serialNumber" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="buildingColumn" editable="false" prefWidth="75.0" sortable="false" text="住户名">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="tenementName" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="roomColumn" editable="false" prefWidth="110.0" sortable="false" text="住户电话">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="tenementPhone" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Label layoutX="343.0" layoutY="93.0" text="详细信息">
+            <font>
+                <Font name="Noto Sans CJK JP" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="411.0" layoutY="245.0" text="住户名">
+            <font>
+                <Font name="Noto Sans CJK JP" size="14.0" />
+            </font></Label>
+        <Label layoutX="411.0" layoutY="310.0" text="住户电话">
+            <font>
+                <Font name="Noto Sans CJK JP" size="14.0" />
+            </font></Label>
+      <Button fx:id="deleteTenementBtn" layoutX="412.0" layoutY="428.0" mnemonicParsing="false" onAction="#deleteTenement" prefHeight="24.0" prefWidth="126.0" stylesheets="@styles.css" text="删除该住户">
+         <font>
+            <Font name="Noto Sans CJK JP" size="14.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

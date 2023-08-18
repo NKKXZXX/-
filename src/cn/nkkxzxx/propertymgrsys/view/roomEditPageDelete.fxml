@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="539.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/11.0.10-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.nkkxzxx.propertymgrsys.controller.RoomEditPageDeleteController">
+    <children>
+        <ListView fx:id="roomsListView" layoutX="30.0" layoutY="93.0" onMouseClicked="#selectRooms" prefHeight="324.0" prefWidth="173.0" stylesheets="@styles.css" />
+        <TextField fx:id="serText" layoutX="30.0" layoutY="425.0" prefHeight="31.0" prefWidth="94.0" promptText="房间号" stylesheets="@styles.css">
+            <font>
+                <Font name="Noto Sans CJK JP" size="14.0" />
+            </font>
+        </TextField>
+        <Button fx:id="searchBtn" layoutX="137.0" layoutY="425.0" mnemonicParsing="false" onAction="#searchRooms" prefHeight="31.0" prefWidth="66.0" stylesheets="@styles.css" text="搜索">
+            <font>
+                <Font name="Noto Sans CJK JP" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="displayAllRoomsBtn" layoutX="30.0" layoutY="469.0" mnemonicParsing="false" onAction="#displayAllRooms" prefHeight="24.0" prefWidth="173.0" stylesheets="@styles.css" text="显示所有房间">
+            <font>
+                <Font name="Noto Sans CJK JP" size="14.0" />
+            </font>
+        </Button>
+        <Label layoutX="30.0" layoutY="30.0" text="删除房间">
+            <font>
+                <Font name="Noto Sans CJK JP" size="30.0" />
+            </font>
+        </Label>
+        <Button fx:id="deleteSelectBtn" layoutX="426.0" layoutY="288.0" mnemonicParsing="false" onAction="#deleteSelectRoom" prefHeight="31.0" prefWidth="126.0" stylesheets="@styles.css" text="删除所选项">
+            <font>
+                <Font name="Noto Sans CJK JP" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="deleteAllBtn" layoutX="426.0" layoutY="375.0" mnemonicParsing="false" onAction="#deleteAllRooms" prefHeight="31.0" prefWidth="126.0" stylesheets="@styles.css" text="删除所有房间">
+            <font>
+                <Font name="Noto Sans CJK JP" size="14.0" />
+            </font>
+        </Button>
+        <TableView fx:id="infoTable" layoutX="324.0" layoutY="123.0" prefHeight="57.0" prefWidth="330.0" stylesheets="@styles.css">
+            <columns>
+                <TableColumn fx:id="floorColumn" editable="false" prefWidth="75.0" sortable="false" text="楼层">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="floor" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="buildingColumn" editable="false" prefWidth="75.0" sortable="false" text="座次">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="building" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="roomColumn" editable="false" prefWidth="75.0" sortable="false" text="房间号">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="room" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="serColumn" editable="false" prefWidth="94.0" sortable="false" text="房间编号">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="serialNumber" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Label layoutX="324.0" layoutY="93.0" text="详细信息">
+            <font>
+                <Font name="Noto Sans CJK JP" size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

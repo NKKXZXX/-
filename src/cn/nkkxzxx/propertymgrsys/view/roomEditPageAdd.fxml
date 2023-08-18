@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="539.0" prefWidth="781.0" style="-fx-background-color: #f8fff8;" xmlns="http://javafx.com/javafx/11.0.10-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.nkkxzxx.propertymgrsys.controller.RoomEditPageAddController">
+   <children>
+      <TextField fx:id="floorText" layoutX="313.0" layoutY="127.0" prefHeight="24.0" prefWidth="140.0" stylesheets="@styles.css" />
+      <TextField fx:id="buildingText" layoutX="313.0" layoutY="204.0" prefHeight="24.0" prefWidth="140.0" stylesheets="@styles.css" />
+      <TextField fx:id="roomText" layoutX="313.0" layoutY="281.0" prefHeight="24.0" prefWidth="140.0" stylesheets="@styles.css" />
+      <Button fx:id="submitBtn" layoutX="314.0" layoutY="369.0" mnemonicParsing="false" onAction="#submitRoom" stylesheets="@styles.css" text="提交">
+         <font>
+            <Font name="Noto Sans CJK JP" size="14.0" />
+         </font></Button>
+      <Button fx:id="clearTextBtn" layoutX="408.0" layoutY="369.0" mnemonicParsing="false" onAction="#clearTextField" stylesheets="@styles.css" text="清除">
+         <font>
+            <Font name="Noto Sans CJK JP" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="311.0" layoutY="98.0" text="楼层">
+         <font>
+            <Font name="Noto Sans CJK JP" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="311.0" layoutY="175.0" text="座次">
+         <font>
+            <Font name="Noto Sans CJK JP" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="311.0" layoutY="252.0" text="房间号">
+         <font>
+            <Font name="Noto Sans CJK JP" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="30.0" text="增加房间">
+         <font>
+            <Font name="Noto Sans CJK JP" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

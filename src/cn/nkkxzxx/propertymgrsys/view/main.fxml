@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="576.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/11.0.10-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.nkkxzxx.propertymgrsys.controller.MainController">
+   <children>
+      <VBox prefHeight="576.0" prefWidth="143.0" style="-fx-background-color: #87CEFA;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="86.0" prefWidth="143.0" style="-fx-background-color: #87CEFA;" text="菜单">
+               <font>
+                  <Font name="Noto Sans CJK JP Bold" size="37.0" />
+               </font>
+            </Button>
+            <Button fx:id="initPageBtn" layoutY="100.0" mnemonicParsing="false" onAction="#initRoomPage" prefHeight="38.0" prefWidth="143.0" stylesheets="@styles.css" text="初始化">
+               <font>
+                  <Font name="Noto Sans CJK JP" size="20.0" />
+               </font></Button>
+            <Button fx:id="roomEditPageBtn" mnemonicParsing="false" onAction="#roomEditPage" prefHeight="38.0" prefWidth="155.0" stylesheets="@styles.css" text="房间编辑">
+               <font>
+                  <Font name="Noto Sans CJK JP" size="20.0" />
+               </font></Button>
+            <Button fx:id="tenementEditBtn" mnemonicParsing="false" onAction="#tenementEdit" prefHeight="38.0" prefWidth="168.0" stylesheets="@styles.css" text="住户编辑">
+               <font>
+                  <Font name="Noto Sans CJK JP" size="20.0" />
+               </font></Button>
+            <Button fx:id="queryBtn" mnemonicParsing="false" onAction="#queryInfoPage" prefHeight="38.0" prefWidth="231.0" stylesheets="@styles.css" text="查询">
+               <font>
+                  <Font name="Noto Sans CJK JP" size="20.0" />
+               </font></Button>
+         </children>
+      </VBox>
+      <StackPane fx:id="pageContainer" layoutX="143.0" prefHeight="576.0" prefWidth="781.0" style="-fx-background-color: #f8fff8;">
+         <children>
+            <Label text="欢迎使用物业管理系统！">
+               <font>
+                  <Font name="Noto Sans CJK JP" size="40.0" />
+               </font></Label>
+         </children></StackPane>
+   </children>
+</AnchorPane>

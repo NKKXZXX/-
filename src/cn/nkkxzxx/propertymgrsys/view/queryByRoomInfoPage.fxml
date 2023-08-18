@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="setPane" prefHeight="539.0" prefWidth="781.0" style="-fx-background-color: #f8fff8;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.nkkxzxx.propertymgrsys.controller.QueryByRoomController">
+
+   <children>
+      <TableView fx:id="infoTable" layoutX="225.0" layoutY="14.0" prefHeight="515.0" prefWidth="542.0" stylesheets="@styles.css">
+         <columns>
+            <TableColumn fx:id="serColumn" prefWidth="75.0" text="房间编号">
+               <cellValueFactory>
+                  <PropertyValueFactory property="serialNumber" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="floorColumn" prefWidth="75.0" text="楼层">
+               <cellValueFactory>
+                  <PropertyValueFactory property="floor" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="buildingColumn" prefWidth="75.0" text="座次">
+               <cellValueFactory>
+                  <PropertyValueFactory property="building" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="roomColumn" prefWidth="75.0" text="房间号">
+               <cellValueFactory>
+                  <PropertyValueFactory property="room" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="teNameColumn" prefWidth="92.0" text="住户姓名">
+               <cellValueFactory>
+                  <PropertyValueFactory property="teName" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tePhoneColumn" prefWidth="148.0" text="住户电话">
+               <cellValueFactory>
+                  <PropertyValueFactory property="tePhone" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <MenuButton layoutX="15.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #f8fff8;" stylesheets="@styles.css" text="查找方式选择">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#displayTenementPage" text="按住户姓名" />
+            <MenuItem mnemonicParsing="false" onAction="#displayRoomInfoPage" text="按房间信息" />
+         </items>
+         <font>
+            <Font name="Noto Sans CJK JP" size="14.0" />
+         </font>
+      </MenuButton>
+      <Pane layoutX="15.0" layoutY="45.0" prefHeight="483.0" prefWidth="200.0">
+         <children>
+            <Label layoutY="20.0" text="按房间信息查找">
+               <font>
+                  <Font name="Noto Sans CJK JP" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="serialNumberText" layoutX="6.0" layoutY="85.0" prefHeight="24.0" prefWidth="188.0" stylesheets="@styles.css" />
+            <TextField fx:id="floorText" layoutX="6.0" layoutY="135.0" prefHeight="24.0" prefWidth="188.0" stylesheets="@styles.css" />
+            <TextField fx:id="buildingText" layoutX="6.0" layoutY="185.0" prefHeight="24.0" prefWidth="188.0" stylesheets="@styles.css" />
+            <TextField fx:id="roomText" layoutX="6.0" layoutY="235.0" prefHeight="24.0" prefWidth="188.0" stylesheets="@styles.css" />
+            <Button fx:id="queryBtn" layoutX="50.0" layoutY="280.0" mnemonicParsing="false" onAction="#query" prefHeight="31.0" prefWidth="102.0" stylesheets="@styles.css" text="查找">
+               <font>
+                  <Font name="Noto Sans CJK JP" size="14.0" />
+               </font></Button>
+            <Button fx:id="queryAllRoomsBtn" layoutX="49.0" layoutY="320.0" mnemonicParsing="false" onAction="#queryAllRooms" stylesheets="@styles.css" text="列出所有房间">
+               <font>
+                  <Font name="Noto Sans CJK JP" size="14.0" />
+               </font></Button>
+            <Button fx:id="clearTextBtn" layoutX="49.0" layoutY="360.0" mnemonicParsing="false" onAction="#clearText" prefHeight="31.0" prefWidth="102.0" stylesheets="@styles.css" text="清空输入框">
+               <font>
+                  <Font name="Noto Sans CJK JP" size="14.0" />
+               </font></Button>
+            <Label layoutX="6.0" layoutY="65.0" text="房间编号">
+               <font>
+                  <Font name="Noto Sans CJK JP" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="115.0" text="楼层">
+               <font>
+                  <Font name="Noto Sans CJK JP" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="165.0" text="座次">
+               <font>
+                  <Font name="Noto Sans CJK JP" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="215.0" text="房间号">
+               <font>
+                  <Font name="Noto Sans CJK JP" size="14.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </children>
+</AnchorPane>

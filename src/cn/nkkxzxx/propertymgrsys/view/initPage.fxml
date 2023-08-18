@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="576.0" prefWidth="781.0" style="-fx-background-color: #f8fff8;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.nkkxzxx.propertymgrsys.controller.InitPageController">
+   <children>
+      <TextField fx:id="floorNumText" layoutX="297.0" layoutY="117.0" prefHeight="29.0" prefWidth="187.0" stylesheets="@styles.css" />
+      <TextField fx:id="buildingNumText" layoutX="297.0" layoutY="209.0" prefHeight="29.0" prefWidth="187.0" stylesheets="@styles.css" />
+      <TextField fx:id="roomNumText" layoutX="297.0" layoutY="304.0" prefHeight="29.0" prefWidth="187.0" stylesheets="@styles.css" />
+      <Button fx:id="generatorBtn" layoutX="297.0" layoutY="396.0" mnemonicParsing="false" onAction="#generateRooms" prefHeight="29.0" prefWidth="187.0" stylesheets="@styles.css" text="自动生成房间及编号">
+         <font>
+            <Font name="Noto Sans CJK JP" size="18.0" />
+         </font></Button>
+      <Label layoutX="297.0" layoutY="74.0" text="楼层数">
+         <font>
+            <Font name="Noto Sans CJK JP" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="297.0" layoutY="169.0" text="每层座数">
+         <font>
+            <Font name="Noto Sans CJK JP" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="297.0" layoutY="267.0" text="每座房间数">
+         <font>
+            <Font name="Noto Sans CJK JP" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="30.0" text="初始化">
+         <font>
+            <Font name="Noto Sans CJK JP" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
